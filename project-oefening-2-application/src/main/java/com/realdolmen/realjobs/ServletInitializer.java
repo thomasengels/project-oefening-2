@@ -1,4 +1,4 @@
-package com.realdolmen.realjobs.application;
+package com.realdolmen.realjobs;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

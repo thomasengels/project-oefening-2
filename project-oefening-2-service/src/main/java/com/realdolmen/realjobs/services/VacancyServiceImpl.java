@@ -1,6 +1,6 @@
 package com.realdolmen.realjobs.services;
 
-import com.realdolmen.realjobs.application.models.Vacancy;
+import com.realdolmen.realjobs.models.Vacancy;
 import com.realdolmen.realjobs.repositories.VacancyRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +14,8 @@ public class VacancyServiceImpl implements VacancyService {
         this.vacancyRepository = vacancyRepository;
     }
 
-    @Override
-    public List<Vacancy> findAll() {
-        return vacancyRepository.findAll();
-    }
+//    @Override
+//    public List<Vacancy> findAll() {
+//        return vacancyRepository.findAll();
+//    }
 }

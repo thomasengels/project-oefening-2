@@ -1,4 +1,4 @@
-package com.realdolmen.realjobs.application;
+package com.realdolmen.realjobs;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.realdolmen.realjobs.application;
+package com.realdolmen.realjobs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
