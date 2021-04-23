@@ -1,0 +1,4 @@
+com\realdolmen\realjobs\application\Application.class
+com\realdolmen\realjobs\application\models\Address.class
+com\realdolmen\realjobs\application\ServletInitializer.class
+com\realdolmen\realjobs\application\models\Vacancy.class

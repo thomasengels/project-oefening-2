@@ -1,6 +1,5 @@
 package com.realdolmen.realjobs.controllers;
 
-import com.realdolmen.realjobs.application.models.Vacancy;
 import com.realdolmen.realjobs.dto.VacancyDTO;
 import com.realdolmen.realjobs.mappers.VacancyMapper;
 import com.realdolmen.realjobs.services.VacancyService;
@@ -21,7 +20,7 @@ public class VacancyController {
         this.vacancyMapper = vacancyMapper;
     }
 
-    @GetMapping("")
+    @GetMapping()
     public Iterable<VacancyDTO> getVacancies(){
         return vacancyService.findAll().stream().map(v -> vacancyMapper.mapToDTO(v)).collect(Collectors.toList());
     }

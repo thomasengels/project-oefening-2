@@ -14,11 +14,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>application</module>
         <module>project-oefening-2-dto</module>
         <module>project-oefening-2-web</module>
         <module>project-oefening-2-service</module>
         <module>project-oefening-2-persistence</module>
+        <module>project-oefening-2-application</module>
     </modules>
 
     <properties>

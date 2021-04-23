@@ -28,8 +28,8 @@
             <version>${spring-data-rest-core.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.realdolmen.realjobs</groupId>
-            <artifactId>application</artifactId>
+            <groupId>groupId</groupId>
+            <artifactId>project-oefening-2-application</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
