@@ -1,4 +1,4 @@
-import com.realdolmen.realjobs.model.Vacancy;
+import com.realdolmen.realjobs.models.Vacancy;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
