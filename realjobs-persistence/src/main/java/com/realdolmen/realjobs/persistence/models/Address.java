@@ -1,4 +1,4 @@
-package com.realdolmen.realjobs.models;
+package com.realdolmen.realjobs.persistence.models;
 
 import lombok.NoArgsConstructor;
 

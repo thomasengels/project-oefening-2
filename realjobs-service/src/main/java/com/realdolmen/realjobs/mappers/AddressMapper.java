@@ -1,7 +1,7 @@
 package com.realdolmen.realjobs.mappers;
 
 import com.realdolmen.realjobs.dto.AddressDTO;
-import com.realdolmen.realjobs.models.Address;
+import com.realdolmen.realjobs.persistence.models.Address;
 import org.mapstruct.InheritConfiguration;
 import org.mapstruct.Mapper;
 

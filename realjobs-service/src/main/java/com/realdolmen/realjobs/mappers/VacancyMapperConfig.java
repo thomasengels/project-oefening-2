@@ -1,7 +1,7 @@
 package com.realdolmen.realjobs.mappers;
 
 import com.realdolmen.realjobs.dto.VacancyDTO;
-import com.realdolmen.realjobs.models.Vacancy;
+import com.realdolmen.realjobs.persistence.models.Vacancy;
 import org.mapstruct.MapperConfig;
 import org.mapstruct.MappingTarget;
 
