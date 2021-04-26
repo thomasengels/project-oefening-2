@@ -1,4 +1,5 @@
-import {Address} from "./Address";
+import {Address} from "./address.model";
+
 
 export interface Vacancy {
   id: number;

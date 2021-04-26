@@ -1,2 +1,13 @@
 <p>Vacancy page</p>
-<app-vacancy-grid [vacancies]="vacancies$ | async"></app-vacancy-grid>
+
+<div class="split-view-container">
+  <div class="left">
+    <app-vacancy-grid [vacancies]="vacancies$ | async" (newVacancyEvent)="updateVancacyDetail($event)">
+    </app-vacancy-grid>
+  </div>
+  <div class="right">
+    <app-detail [vacancy]="vacancy">
+    </app-detail>
+  </div>
+</div>
+

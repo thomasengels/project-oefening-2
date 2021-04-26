@@ -1,1 +1,29 @@
-<p>detail works!</p>
+<div *ngIf="vacancy == null; else vacancyDetail">
+  <h2>Find your next dream job here!</h2>
+  <h2>Get started by searching for keywords in the search bar at the top of the page.</h2>
+  <h2>Refine your search with the different search filters.</h2>
+  <h2>You can also sort your search results.</h2>
+  <h2>Click on one of the vacancy cards on the left to see more details.</h2>
+</div>
+
+<ng-template #vacancyDetail>
+<div class="vacancyHeader">
+  <h1 class="vacancyTitle">{{vacancy.functionTitle}}</h1>
+  <h2>{{vacancy.companyName}}</h2>
+  <h2>{{vacancy.address.city}}</h2>
+</div>
+
+  <div class="vacancyInfo">
+    <div class="generalInfo">
+
+    </div>
+
+    <div class="description">
+
+    </div>
+
+    <div class="offer">
+
+    </div>
+  </div>
+</ng-template>

@@ -7,6 +7,8 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { VacancySearchPageComponent } from './pages/vacancy-search-page/vacancy-search-page.component';
 import {SharedModule} from "../shared/shared.module";
+import {HttpClientModule} from "@angular/common/http";
+import {CardModule} from "primeng/card";
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import {SharedModule} from "../shared/shared.module";
   imports: [
     CommonModule,
     VacancyRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+    CardModule
   ]
 })
 export class VacancyModule { }

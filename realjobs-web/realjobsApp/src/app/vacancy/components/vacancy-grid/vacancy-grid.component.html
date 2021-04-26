@@ -1,0 +1,13 @@
+<div style="overflow-y: scroll;">
+  <div class="p-d-inline-flex p-flex-wrap" *ngFor="let vacancy of vacancies; trackBy: trackByVacancyId">
+    <div class="p-mr-6 p-mb-6">
+      <p-card (click)="openDetails(vacancy)" [style]="{'width': '25rem', 'margin-bottom': '2em', 'cursor': 'pointer'}">
+        <p-header>
+          <h2 class="cardTitle">{{vacancy.functionTitle}}</h2>
+        </p-header>
+        <h4>{{vacancy.companyName}}</h4>
+        <h4>{{vacancy.address.city}}</h4>
+      </p-card>
+    </div>
+  </div>
+</div>
