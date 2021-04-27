@@ -7,23 +7,43 @@
 </div>
 
 <ng-template #vacancyDetail>
-<div class="vacancyHeader">
-  <h1 class="vacancyTitle">{{vacancy.functionTitle}}</h1>
-  <h2>{{vacancy.companyName}}</h2>
-  <h2>{{vacancy.address.city}}</h2>
-</div>
+  <div class="vacancyHeader">
+    <h1 class="vacancyTitle">{{vacancy.functionTitle}}</h1>
+    <button style="position: absolute;right: 1em;" pButton type="button" label="Apply now"></button>
+    <h3>Company: {{vacancy.companyName}}</h3>
+    <h3>City: {{vacancy.address.city}}</h3>
+    <h3>Date posted: {{vacancy.postingDate | date:'fullDate'}}</h3>
+  </div>
 
   <div class="vacancyInfo">
     <div class="generalInfo">
-
+      <p-card>
+        <ng-template pTemplate="header">
+          <h2>General info</h2>
+        </ng-template>
+        <h4>Industry: {{vacancy.industry}}</h4>
+        <h4>Required experience: {{vacancy.requiredYearsOfExperience}}</h4>
+        <h4>Contract type: {{vacancy.contractType}}</h4>
+        <h4>Location: {{vacancy.address.city}}</h4>
+      </p-card>
     </div>
 
     <div class="description">
-
+      <p-card>
+        <ng-template pTemplate="header">
+          <h2>Description</h2>
+        </ng-template>
+        <p>{{vacancy.functionDescription}}</p>
+      </p-card>
     </div>
 
     <div class="offer">
-
+      <p-card>
+        <ng-template pTemplate="header">
+          <h2>Offer</h2>
+        </ng-template>
+        <p>{{vacancy.offer}}</p>
+      </p-card>
     </div>
   </div>
 </ng-template>

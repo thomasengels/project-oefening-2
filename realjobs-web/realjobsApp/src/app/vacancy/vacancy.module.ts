@@ -9,16 +9,18 @@ import { VacancySearchPageComponent } from './pages/vacancy-search-page/vacancy-
 import {SharedModule} from "../shared/shared.module";
 import {HttpClientModule} from "@angular/common/http";
 import {CardModule} from "primeng/card";
+import {ButtonModule} from "primeng/button";
 
 
 @NgModule({
   declarations: [VacancyGridComponent, FiltersComponent, DetailComponent, VacancySearchPageComponent],
-  imports: [
-    CommonModule,
-    VacancyRoutingModule,
-    SharedModule,
-    HttpClientModule,
-    CardModule
-  ]
+    imports: [
+        CommonModule,
+        VacancyRoutingModule,
+        SharedModule,
+        HttpClientModule,
+        CardModule,
+        ButtonModule
+    ]
 })
 export class VacancyModule { }
