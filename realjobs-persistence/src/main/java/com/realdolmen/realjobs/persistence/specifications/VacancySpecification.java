@@ -1,11 +1,13 @@
 package com.realdolmen.realjobs.persistence.specifications;
 
+import com.realdolmen.realjobs.persistence.models.ContractType;
 import com.realdolmen.realjobs.persistence.models.Vacancy;
 import org.springframework.data.jpa.domain.Specification;
 
 import java.time.Instant;
 import java.time.Period;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public final class VacancySpecification {
     private VacancySpecification() {
@@ -20,11 +22,15 @@ public final class VacancySpecification {
     }
 
     public static Specification<Vacancy> withContractTypes(List<String> contractTypes) {
-        if (contractTypes == null || contractTypes.isEmpty()) {
+        if(contractTypes == null){
+            return new AlwaysTrueSpecification<>();
+        }
+       List<ContractType> contractTypeEnumList =  contractTypes.stream().map(ContractType::valueOf).collect(Collectors.toList());
+        if (contractTypeEnumList.isEmpty()) {
             return new AlwaysTrueSpecification<>();
         }
         return (root, query, builder) ->
-                builder.in(root.get("contractType").get("contractTypeName")).value(contractTypes);
+                builder.in(root.get("contractType")).value(contractTypeEnumList);
     }
 
     public static Specification<Vacancy> withDatePostedNotOlderThan(Integer days) {

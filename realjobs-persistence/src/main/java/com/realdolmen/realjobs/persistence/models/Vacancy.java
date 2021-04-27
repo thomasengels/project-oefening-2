@@ -22,7 +22,7 @@ public class Vacancy {
     private int requiredYearsOfExperience;
     private String requiredExperienceSkillsEducation;
     private String offer;
-    @ManyToOne
+    @Enumerated(EnumType.STRING)
     private ContractType contractType;
     @ManyToOne
     private Industry industry;

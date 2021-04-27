@@ -1,4 +1,5 @@
 import {Address} from "./address.model";
+import {Industry} from "./industry.model";
 
 
 export interface Vacancy {
@@ -8,7 +9,7 @@ export interface Vacancy {
   functionDescription: string;
   postingDate: Date;
   companyName: string;
-  industry: String;
+  industry: Industry;
   requiredYearsOfExperience: number;
   requiredExperienceSkillsEducation: string;
   offer: string;

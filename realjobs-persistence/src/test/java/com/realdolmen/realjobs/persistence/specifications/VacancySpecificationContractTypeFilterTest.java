@@ -2,7 +2,6 @@ package com.realdolmen.realjobs.persistence.specifications;
 
 import com.realdolmen.realjobs.persistence.models.ContractType;
 import com.realdolmen.realjobs.persistence.models.Vacancy;
-import com.realdolmen.realjobs.persistence.repositories.ContractTypeRepository;
 import com.realdolmen.realjobs.persistence.repositories.VacancyRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,19 +22,14 @@ public class VacancySpecificationContractTypeFilterTest {
     @Autowired
     private VacancyRepository vacancyRepository;
 
-    @Autowired
-    private ContractTypeRepository contractTypeRepository;
-
     @BeforeEach
     public void setup() {
-        ContractType contractType = new ContractType(1L, "Fulltime");
-        Vacancy vacancy = Vacancy.builder().id(1L).functionTitle("Java developer").contractType(contractType).build();
 
-        ContractType contractType2 = new ContractType(2L, "Parttime");
-        Vacancy vacancy2 = Vacancy.builder().id(2L).functionTitle("C# developer").contractType(contractType2).build();
-        Vacancy vacancy3 = Vacancy.builder().id(3L).functionTitle("Java developer 2").contractType(contractType2).build();
-        contractTypeRepository.save(contractType);
-        contractTypeRepository.save(contractType2);
+        Vacancy vacancy = Vacancy.builder().id(1L).functionTitle("Java developer").contractType(ContractType.FULL_TIME).build();
+
+
+        Vacancy vacancy2 = Vacancy.builder().id(2L).functionTitle("C# developer").contractType(ContractType.STUDENT).build();
+        Vacancy vacancy3 = Vacancy.builder().id(3L).functionTitle("Java developer 2").contractType(ContractType.STUDENT).build();
 
         vacancyRepository.save(vacancy);
         vacancyRepository.save(vacancy2);
@@ -44,15 +38,15 @@ public class VacancySpecificationContractTypeFilterTest {
 
     @Test
     public void vacancyFilterBySingleContractTypeTest() {
-        List<Vacancy> vacancies = vacancyRepository.findAll(VacancySpecification.withContractTypes(Collections.singletonList("Fulltime")));
+        List<Vacancy> vacancies = vacancyRepository.findAll(VacancySpecification.withContractTypes(Collections.singletonList("FULL_TIME")));
         assertEquals(1, vacancies.size());
-        assertEquals("Fulltime", vacancies.get(0).getContractType().getContractTypeName());
+        assertEquals(ContractType.FULL_TIME, vacancies.get(0).getContractType());
         assertEquals(1L, vacancies.get(0).getId());
     }
 
     @Test
     public void vacancyFilterByMultipleContractTypesTest() {
-        List<Vacancy> vacancies = vacancyRepository.findAll(VacancySpecification.withContractTypes(Arrays.asList("Fulltime", "Parttime")));
+        List<Vacancy> vacancies = vacancyRepository.findAll(VacancySpecification.withContractTypes(Arrays.asList("FULL_TIME","STUDENT")));
         assertEquals(3, vacancies.size());
     }
 

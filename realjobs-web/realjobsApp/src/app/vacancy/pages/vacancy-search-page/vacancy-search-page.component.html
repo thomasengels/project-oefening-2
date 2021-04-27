@@ -1,5 +1,18 @@
 <p>Vacancy page</p>
 
+<div class="filter">
+
+  <p-multiSelect [options]="contractTypes" placeholder="Contract type"
+                 [(ngModel)]="selectedContractTypes"></p-multiSelect>
+  <p-dropdown [options]="datePostedOptions" [(ngModel)]="selectedDatePosted" optionLabel="name"
+              optionValue="nrOfDays"></p-dropdown>
+  <p-multiSelect [options]="industries" placeholder="Contract type"
+                 [(ngModel)]="selectedIndustries"></p-multiSelect>
+  <p-dropdown [options]="yearsOfExperienceOptions" [(ngModel)]="selectedYearsOfExperience" optionLabel="name"
+              optionValue="minYear-maxYear"></p-dropdown>
+
+</div>
+
 <div class="split-view-container">
   <div class="left">
     <app-vacancy-grid [vacancies]="vacancies$ | async" (newVacancyEvent)="updateVancacyDetail($event)">
