@@ -35,10 +35,10 @@ VALUES (12, 'Ghent', 'Belgium', '4', 'C', 9000, 'Bevrijdingslaan');
 
 INSERT INTO public.vacancy
 VALUES (1, 'Smals', 'As a java developer ...', 'Java Developer 1', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 2, 1, 1);
+        '2020-03-26 00:00:00', 'At least a bachelor in ...', 2, 2, 1, 1);
 INSERT INTO public.vacancy
 VALUES (2, 'Smals', 'As a java developer ...', 'Java Developer 2', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 2, 1, 1);
+        '2021-02-10 00:00:00', 'At least a bachelor in ...', 2, 2, 1, 1);
 INSERT INTO public.vacancy
 VALUES (3, 'Smals', 'As a java developer ...', 'Java Developer 3', 'What we offer: ',
         '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 3, 1, 1);

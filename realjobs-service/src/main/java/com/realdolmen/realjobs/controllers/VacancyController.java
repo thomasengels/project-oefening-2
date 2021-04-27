@@ -22,9 +22,11 @@ public class VacancyController {
 
     @GetMapping("")
     public Iterable<Vacancy> getVacancies(@RequestParam(required = false) List<String> industryNames,
-                                          @RequestParam(required = false) List<String> contractTypes) {
+                                          @RequestParam(required = false) List<String> contractTypes,
+                                          @RequestParam(required = false) int maxPostedDate) {
         Specification<Vacancy> vacancySpecification = VacancySpecification.withIndustryNames(industryNames)
-                .and(VacancySpecification.withContractTypes(contractTypes));
+                .and(VacancySpecification.withContractTypes(contractTypes)
+                .and(VacancySpecification.withDatePostedNotOlderThan(maxPostedDate)));
         return vacancyService.findAll(vacancySpecification);
     }
 }
