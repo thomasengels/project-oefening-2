@@ -1,3 +1,13 @@
+INSERT INTO public.industry(id, industry_name)
+VALUES (1, 'IT');
+INSERT INTO public.industry(id, industry_name)
+VALUES (2, 'Healthcare');
+
+INSERT INTO public.contract_type(id, contract_type_name)
+VALUES (1, 'Fulltime');
+INSERT INTO public.contract_type(id, contract_type_name)
+VALUES (2, 'Parttime');
+
 INSERT INTO public.address(id, city, country, house_box, house_nr, postal_code, street_name)
 VALUES (1, 'Ghent', 'Belgium', '4', 'C', 9000, 'Bevrijdingslaan');
 INSERT INTO public.address(id, city, country, house_box, house_nr, postal_code, street_name)
@@ -24,39 +34,39 @@ INSERT INTO public.address(id, city, country, house_box, house_nr, postal_code, 
 VALUES (12, 'Ghent', 'Belgium', '4', 'C', 9000, 'Bevrijdingslaan');
 
 INSERT INTO public.vacancy
-VALUES (1, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 1', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 1);
+VALUES (1, 'Smals', 'As a java developer ...', 'Java Developer 1', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 2, 1, 1);
 INSERT INTO public.vacancy
-VALUES (2, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 2', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 2);
+VALUES (2, 'Smals', 'As a java developer ...', 'Java Developer 2', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 2, 1, 1);
 INSERT INTO public.vacancy
-VALUES (3, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 3', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 3);
+VALUES (3, 'Smals', 'As a java developer ...', 'Java Developer 3', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 3, 1, 1);
 INSERT INTO public.vacancy
-VALUES (4, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 4', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 4);
+VALUES (4, 'Smals', 'As a java developer ...', 'Java Developer 4', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 4, 2, 1);
 INSERT INTO public.vacancy
-VALUES (5, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 5', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 5);
+VALUES (5, 'Smals', 'As a java developer ...', 'Java Developer 5', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 5, 1, 2);
 INSERT INTO public.vacancy
-VALUES (6, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 6', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 6);
+VALUES (6, 'Smals', 'As a java developer ...', 'Java Developer 6', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 6, 2, 2);
 INSERT INTO public.vacancy
-VALUES (7, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 7', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 7);
+VALUES (7, 'Smals', 'As a java developer ...', 'Java Developer 7', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 7, 1, 2);
 INSERT INTO public.vacancy
-VALUES (8, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 8', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 8);
+VALUES (8, 'Smals', 'As a java developer ...', 'Java Developer 8', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 8, 2, 1);
 INSERT INTO public.vacancy
-VALUES (9, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 9', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 9);
+VALUES (9, 'Smals', 'As a java developer ...', 'Java Developer 9', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 9, 1, 2);
 INSERT INTO public.vacancy
-VALUES (10, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 10', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 10);
+VALUES (10, 'Smals', 'As a java developer ...', 'Java Developer 10', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 10, 1, 2);
 INSERT INTO public.vacancy
-VALUES (11, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 11', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 11);
+VALUES (11, 'Smals', 'As a java developer ...', 'Java Developer 11', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 11, 1, 2);
 INSERT INTO public.vacancy
-VALUES (12, 'Smals', 'fulltime', 'As a java developer ...', 'Java Developer 12', 'Health Services', 'What we offer: ',
-        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 12);
+VALUES (12, 'Smals', 'As a java developer ...', 'Java Developer 12', 'What we offer: ',
+        '2021-04-26 00:00:00', 'At least a bachelor in ...', 2, 12, 1, 2);
 

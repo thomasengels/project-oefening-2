@@ -2,6 +2,7 @@ package com.realdolmen.realjobs.services;
 
 import com.realdolmen.realjobs.persistence.models.Vacancy;
 import com.realdolmen.realjobs.persistence.repositories.VacancyRepository;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,7 +14,7 @@ public class VacancyServiceImpl implements VacancyService {
     }
 
     @Override
-    public Iterable<Vacancy> findAll() {
-        return vacancyRepository.findAll();
+    public Iterable<Vacancy> findAll(Specification<Vacancy> vacancySpecification) {
+        return vacancyRepository.findAll(vacancySpecification);
     }
 }

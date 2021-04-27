@@ -1,30 +1,31 @@
 package com.realdolmen.realjobs.persistence.models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.time.Instant;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Vacancy {
     @Id
     private Long id;
     private String functionTitle;
-    private String contractType;
     private String functionDescription;
     private Instant postingDate;
     private String companyName;
-    private String industry;
     private int requiredYearsOfExperience;
     private String requiredExperienceSkillsEducation;
     private String offer;
+    @ManyToOne
+    private ContractType contractType;
+    @ManyToOne
+    private Industry industry;
     @OneToOne
     private Address address;
 }

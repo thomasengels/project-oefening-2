@@ -1,8 +1,6 @@
 package com.realdolmen.realjobs.persistence.models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,6 +9,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Getter
 @Setter
+@AllArgsConstructor
 public class Address {
     @Id
     private Long id;
