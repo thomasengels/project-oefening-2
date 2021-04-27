@@ -1,7 +1,6 @@
 package com.realdolmen.realjobs.persistence.specifications;
 
 import com.realdolmen.realjobs.persistence.models.ContractType;
-import com.realdolmen.realjobs.persistence.models.Industry;
 import com.realdolmen.realjobs.persistence.models.Vacancy;
 import com.realdolmen.realjobs.persistence.repositories.ContractTypeRepository;
 import com.realdolmen.realjobs.persistence.repositories.VacancyRepository;

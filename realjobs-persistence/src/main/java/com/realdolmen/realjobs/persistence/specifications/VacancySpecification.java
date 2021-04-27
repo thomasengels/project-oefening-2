@@ -27,8 +27,8 @@ public final class VacancySpecification {
                 builder.in(root.get("contractType").get("contractTypeName")).value(contractTypes);
     }
 
-    public static Specification<Vacancy> withDatePostedNotOlderThan(int days) {
-        if (days <= 0) {
+    public static Specification<Vacancy> withDatePostedNotOlderThan(Integer days) {
+        if (days == null) {
             return new AlwaysTrueSpecification<>();
         }
         Instant maxPostedDate = Instant.now().minus(Period.ofDays(days));
@@ -36,4 +36,13 @@ public final class VacancySpecification {
                 builder.greaterThan(root.get("postingDate"), maxPostedDate);
     }
 
+    public static Specification<Vacancy> withExperienceBetween(Integer minExperience, Integer maxExperience) {
+        if (minExperience == null && maxExperience == null) {
+            return new AlwaysTrueSpecification<>();
+        }
+        return (root, query, builder) -> builder.and(
+                builder.greaterThanOrEqualTo(root.get("requiredYearsOfExperience"), minExperience),
+                builder.lessThanOrEqualTo(root.get("requiredYearsOfExperience"), maxExperience)
+        );
+    }
 }
