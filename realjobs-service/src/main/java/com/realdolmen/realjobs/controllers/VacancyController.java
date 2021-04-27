@@ -21,8 +21,10 @@ public class VacancyController {
     }
 
     @GetMapping("")
-    public Iterable<Vacancy> getVacancies(@RequestParam(required = false) List<String> industryNames) {
-        Specification<Vacancy> vacancySpecification = VacancySpecification.withIndustryNames(industryNames);
+    public Iterable<Vacancy> getVacancies(@RequestParam(required = false) List<String> industryNames,
+                                          @RequestParam(required = false) List<String> contractTypes) {
+        Specification<Vacancy> vacancySpecification = VacancySpecification.withIndustryNames(industryNames)
+                .and(VacancySpecification.withContractTypes(contractTypes));
         return vacancyService.findAll(vacancySpecification);
     }
 }

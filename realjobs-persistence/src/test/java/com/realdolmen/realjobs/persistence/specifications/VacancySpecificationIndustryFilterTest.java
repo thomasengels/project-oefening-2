@@ -30,9 +30,12 @@ class VacancySpecificationIndustryFilterTest {
     public void setup() {
         Industry industry = Industry.builder().id(1L).industryName("IT").build();
         Vacancy vacancy = Vacancy.builder().id(1L).functionTitle("Java developer").industry(industry).build();
+
         Industry industry2 = Industry.builder().id(2L).industryName("Healthcare").build();
         Vacancy vacancy2 = Vacancy.builder().id(2L).functionTitle("C# developer").industry(industry2).build();
+
         Vacancy vacancy3 = Vacancy.builder().id(3L).functionTitle("Java developer 2").industry(industry).build();
+
         industryRepository.save(industry);
         industryRepository.save(industry2);
         vacancyRepository.save(vacancy);
